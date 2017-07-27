@@ -17,14 +17,13 @@ const btnLogin = $("#btnLogin");
 const btnSignUp = $("#btnSignUp");
 const btnLogout = $("#btnLogout");
 
+
 // Add login event
 btnLogin.click(function() {
     console.log("clicked login btn");
     const email = textEmail.val();
     const password = textPassword.val();
     const auth = firebase.auth();
-
-    console.log("Email: " + email "Password:")
 
     // Sign In
     const promise = auth.signInWithEmailAndPassword(email, password);
